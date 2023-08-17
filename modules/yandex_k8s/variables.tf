@@ -22,6 +22,10 @@ variable "yc_scale_k8s_cluster_master_zonal_subnet_id" {
   type = string
 }
 
-# variable "yc_scale_k8s_group_node_instance_subnet_ids" {
-#   type = list(string)
-# }
+variable "yc_scale_k8s_node_group_ru_central1_a_subnet_id" {
+  type = string
+}
+
+variable "yc_scale_k8s_node_group_ru_central1_b_subnet_id" {
+  type = string
+}
