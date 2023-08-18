@@ -36,7 +36,7 @@ resource "yandex_kubernetes_node_group" "yc-scale-node-group1" {
       core_fraction = 5
       cores         = 2
       gpus          = 0
-      memory        = 1
+      memory        = 2
     }
 
     scheduling_policy {
@@ -96,7 +96,7 @@ resource "yandex_kubernetes_node_group" "yc-scale-node-group2" {
       core_fraction = 5
       cores         = 2
       gpus          = 0
-      memory        = 1
+      memory        = 2
     }
 
     scheduling_policy {
