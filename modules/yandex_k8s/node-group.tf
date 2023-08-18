@@ -111,8 +111,8 @@ resource "yandex_kubernetes_node_group" "yc-scale-node-group2" {
 
   scale_policy {
     auto_scale {
-      initial = 1
-      min = 1
+      initial = 0
+      min = 0
       max = 3
     }
   }
