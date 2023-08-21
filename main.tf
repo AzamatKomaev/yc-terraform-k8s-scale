@@ -38,5 +38,12 @@ module "yandex_k8s" {
 
   yc_scale_k8s_node_group_ru_central1_a_subnet_id = module.yandex_vpc.default_ruc1_a_subnet_id
   yc_scale_k8s_node_group_ru_central1_b_subnet_id = module.yandex_vpc.default_ruc1_b_subnet_id
+}
 
+module "yandex_postgresql" {
+  source = "./modules/yandex_postgresql"
+
+  postgres_zone_id = "ru-central1-a"
+  postgres_network_id = module.yandex_vpc.default_network_id
+  postgres_subnet_id = module.yandex_vpc.default_ruc1_a_subnet_id  
 }
