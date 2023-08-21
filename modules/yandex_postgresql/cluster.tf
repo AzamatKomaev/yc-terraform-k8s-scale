@@ -1,5 +1,5 @@
 resource "yandex_mdb_postgresql_cluster" "postcreator-psql" {
-  deletion_protection = true
+  deletion_protection = false
   environment         = "PRODUCTION"
   name                = "postcreator-psql"
   network_id          = var.postgres_network_id
@@ -28,7 +28,7 @@ resource "yandex_mdb_postgresql_cluster" "postcreator-psql" {
       statements_sampling_interval = 600
     }
     resources {
-      disk_size          = 20
+      disk_size          = 50
       disk_type_id       = "network-ssd"
       resource_preset_id = "b1.medium"
     }
