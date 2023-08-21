@@ -4,5 +4,5 @@ resource "yandex_mdb_postgresql_database" "db1" {
   lc_collate          = "C"
   lc_type             = "C"
   name                = "db1"
-  owner               = "user1"
+  owner               = yandex_mdb_postgresql_user.user1.name
 }
